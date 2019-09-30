@@ -2,6 +2,7 @@ import 'dart:html' as html;
 
 import 'package:flutter/material.dart';
 import 'package:vmihalachi_flutter/project.dart';
+import 'package:vmihalachi_flutter/responsive_layout.dart';
 
 void main() => runApp(App());
 
@@ -12,22 +13,75 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-          buttonTheme: ButtonThemeData(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)))),
-      home: Scaffold(
-        backgroundColor: Colors.black,
-        body: Row(
-          children: [
-            Spacer(),
-            ConstrainedBox(constraints: BoxConstraints(maxWidth: 500), child: _Headline()),
-            SizedBox(width: 100),
-            ConstrainedBox(constraints: BoxConstraints(maxWidth: 500), child: _Projects()),
-            Spacer(),
-          ],
-        ),
-      ),
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark().copyWith(
+            buttonTheme: ButtonThemeData(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)))),
+        home: Scaffold(
+            backgroundColor: Colors.black,
+            body: ResponsiveLayout(
+              largeScreen:HomePageLarge(),
+              smallScreen: HomePage(),
+            )));
+  }
+}
+
+class HomePageLarge extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Spacer(),
+        ConstrainedBox(constraints: BoxConstraints(maxWidth: 500), child: _Headline()),
+        SizedBox(width: 100),
+        ConstrainedBox(constraints: BoxConstraints(maxWidth: 500), child: _Projects()),
+        Spacer(),
+      ],
     );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: EdgeInsets.all(24),
+      children: [
+        SizedBox(height: 48),
+        _Headline(),
+        SizedBox(height: 48),
+        _Projects(),
+      ],
+    );
+  }
+}
+
+class _Headline extends StatelessWidget {
+  const _Headline({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(
+        "Vlad Mihalachi",
+        style: TextStyle(fontWeight: FontWeight.bold),
+        textScaleFactor: 2,
+      ),
+      SizedBox(height: _kSpace),
+      Text(
+        "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
+        "Freelancer and co-founder of Globl Agency and Docode OÜ.",
+        style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w200),
+      ),
+      SizedBox(height: _kSpace * 2),
+      RaisedButton(
+        padding: EdgeInsets.symmetric(horizontal: 48, vertical: 12),
+        color: _kPrimaryColor,
+        child: Text('Hire Vlad'.toUpperCase()),
+        onPressed: () {
+          html.window.open('mailto:vmihalachi@outook.com', '_blank');
+        },
+      )
+    ]);
   }
 }
 
@@ -59,69 +113,34 @@ class _Projects extends StatelessWidget {
         url: 'https://play.google.com/store/apps/details?id=com.vmihalachi.justquoteit'),
   ];
 
-  const _Projects({
-    Key key,
-  }) : super(key: key);
+  const _Projects({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      for (final project in _kProjects)
-        ...[
-          FlatButton(
-            padding: EdgeInsets.all(16),
-            color: Colors.grey[800],
-            onPressed: () {
-              html.window.open(project.url, '_blank');
-            },
-            child: SizedBox(
-                width: double.infinity,
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(
-                    project.title,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                    textScaleFactor: 1.1,
-                  ),
-                  Text(
-                    project.description,
-                    style: TextStyle(fontWeight: FontWeight.w200),
-                  ),
-                ])),
-          ),
-          SizedBox(height: _kSpace)
-        ]
-    ]);
-  }
-}
-
-class _Headline extends StatelessWidget {
-  const _Headline({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(
-        "Vlad Mihalachi",
-        style: TextStyle(fontWeight: FontWeight.bold),
-        textScaleFactor: 2,
-      ),
-      SizedBox(height: _kSpace),
-      Text(
-        "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
-        "Freelancer and co-founder of Globl Agency and Docode OÜ.",
-        style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w200),
-      ),
-      SizedBox(height: _kSpace * 2),
-      RaisedButton(
-        padding: EdgeInsets.symmetric(horizontal: 48, vertical: 12),
-        color: _kPrimaryColor,
-        child: Text('Hire Vlad'.toUpperCase()),
-        onPressed: () {
-          html.window.open('mailto:vmihalachi@outook.com', '_blank');
-        },
-      )
+      for (final project in _kProjects) ...[
+        FlatButton(
+          padding: EdgeInsets.all(16),
+          color: Colors.grey[800],
+          onPressed: () {
+            html.window.open(project.url, '_blank');
+          },
+          child: SizedBox(
+              width: double.infinity,
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(
+                  project.title,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                  textScaleFactor: 1.1,
+                ),
+                Text(
+                  project.description,
+                  style: TextStyle(fontWeight: FontWeight.w200),
+                ),
+              ])),
+        ),
+        SizedBox(height: _kSpace)
+      ]
     ]);
   }
 }

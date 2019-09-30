@@ -1,7 +1,7 @@
 name: vmihalachi_flutter
-description: Example for the simple_animations package
-author: Felix Blaschke <felix@felix-blaschke.de>
-homepage: https://github.com/felixblaschke/simple_animations
+description: Landing page for vmihalachi.com
+author: Vlad Mihalachi <vmihalachi@outlook.com>
+homepage: https://github.com/vmihalachi/vmihalachi_flutter
 
 environment:
   sdk: ">=2.2.2 <3.0.0"
@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: 5.1.4
+  # url_launcher: 5.1.4
 flutter:
   assets:
     - preview.png
