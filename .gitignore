@@ -63,7 +63,7 @@ version
 .packages
 .pub-cache/
 .pub/
-/build/
+# /build/
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -112,7 +112,7 @@ version
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
+# build/
 DerivedData/
 
 ## Various settings
@@ -188,7 +188,7 @@ out/
 
 # Gradle files
 .gradle/
-build/
+# build/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -329,7 +329,7 @@ xcuserdata/
 *.xccheckout
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
-build/
+# build/
 DerivedData/
 *.moved-aside
 *.pbxuser
@@ -346,7 +346,7 @@ DerivedData/
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
+# build/
 DerivedData/
 
 ## Various settings

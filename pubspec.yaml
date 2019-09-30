@@ -11,5 +11,3 @@ dependencies:
     sdk: flutter
   # url_launcher: 5.1.4
 flutter:
-  assets:
-    - preview.png
