@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "family": "circular",
+    "fonts": [
+      {
+        "asset": "fonts/circular-black.ttf",
+        "weight": 900
+      },
+      {
+        "asset": "fonts/circular-blackitalic.ttf",
+        "style": "italic",
+        "weight": 900
+      },
+      {
+        "asset": "fonts/circular-bold.ttf",
+        "weight": 700
+      },
+      {
+        "asset": "fonts/circular-bolditalic.ttf",
+        "style": "italic",
+        "weight": 700
+      },
+      {
+        "asset": "fonts/circular-book.ttf",
+        "weight": 300
+      },
+      {
+        "asset": "fonts/circular-bookitalic.ttf",
+        "style": "italic",
+        "weight": 300
+      },
+      {
+        "asset": "fonts/circular-medium.ttf"
+      },
+      {
+        "asset": "fonts/circular-mediumitalic.ttf",
+        "style": "italic"
+      }
+    ]
+  }
+]
