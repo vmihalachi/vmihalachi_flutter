@@ -65,14 +65,14 @@ class _Headline extends StatelessWidget {
     return Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text(
         "Vlad Mihalachi",
-        style: TextStyle(fontWeight: FontWeight.bold),
+        style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'circular'),
         textScaleFactor: 2,
       ),
       SizedBox(height: _kSpace),
       Text(
         "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
         "Freelancer and co-founder of Globl Agency and Docode OÜ.",
-        style: TextStyle(color: Colors.grey),
+        style: TextStyle(color: Colors.grey, fontFamily: 'circular'),
         textScaleFactor: 1.3,
         // textAlign: TextAlign.justify,
       ),
@@ -80,7 +80,7 @@ class _Headline extends StatelessWidget {
       RaisedButton(
         padding: EdgeInsets.symmetric(horizontal: 48, vertical: 12),
         color: _kPrimaryColor,
-        child: Text('Hire Vlad'.toUpperCase()),
+        child: Text('Hire Vlad'.toUpperCase(), style: TextStyle(fontFamily: 'circular')),
         onPressed: () {
           html.window.open('mailto:vmihalachi@outook.com', '_blank');
         },
@@ -146,13 +146,13 @@ class _Projects extends StatelessWidget {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(
                   project.title,
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'circular'),
                   textScaleFactor: 1.1,
                 ),
                 SizedBox(height: 4),
                 Text(
                   project.description,
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Colors.grey, fontFamily: 'circular'),
                 ),
               ])),
         ),
