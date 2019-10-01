@@ -15,13 +15,15 @@ class App extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
+            // fontFamily: 'circular',
             buttonTheme: ButtonThemeData(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)))),
         home: Scaffold(
             backgroundColor: Colors.black,
             body: ResponsiveLayout(
-              largeScreen: HomePageLarge(),
-              smallScreen: HomePage(),
-            )));
+                largeScreen: HomePageLarge(),
+                smallScreen: HomePage(),
+              ),
+            ));
   }
 }
 
@@ -135,7 +137,7 @@ class _Projects extends StatelessWidget {
         FlatButton(
           padding: EdgeInsets.all(24),
           color: Colors.grey[900],
-          hoverColor: project.color,
+          // hoverColor: project.color,
           onPressed: () {
             html.window.open(project.url, '_blank');
           },

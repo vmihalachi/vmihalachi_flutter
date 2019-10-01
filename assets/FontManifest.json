@@ -1,0 +1,31 @@
+[
+  {
+    "family": "circular",
+    "fonts": [
+      {
+        "asset": "fonts/circular-black.ttf"
+      },
+      {
+        "asset": "fonts/circular-blackitalic.ttf"
+      },
+      {
+        "asset": "fonts/circular-bold.ttf"
+      },
+      {
+        "asset": "fonts/circular-bolditalic.ttf"
+      },
+      {
+        "asset": "fonts/circular-book.ttf"
+      },
+      {
+        "asset": "fonts/circular-bookitalic.ttf"
+      },
+      {
+        "asset": "fonts/circular-medium.ttf"
+      },
+      {
+        "asset": "fonts/circular-mediumitalic.ttf"
+      }
+    ]
+  }
+]

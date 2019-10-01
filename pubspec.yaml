@@ -10,4 +10,16 @@ dependencies:
   flutter:
     sdk: flutter
   # url_launcher: 5.1.4
+
 flutter:
+#  fonts:
+#    - family: circular
+#      fonts:
+#        - asset: assets/fonts/circular-medium.ttf
+#        - asset: assets/fonts/circular-mediumitalic.ttf
+#        - asset: assets/fonts/circular-black.ttf
+#        - asset: assets/fonts/circular-blackitalic.ttf
+#        - asset: assets/fonts/circular-bold.ttf
+#        - asset: assets/fonts/circular-bolditalic.ttf
+#        - asset: assets/fonts/circular-book.ttf
+#        - asset: assets/fonts/circular-bookitalic.ttf
