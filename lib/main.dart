@@ -62,16 +62,14 @@ class _Headline extends StatelessWidget {
       Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(
           "Vlad Mihalachi",
-          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'circular'),
-          textScaleFactor: 2,
+          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'circular', fontSize: 30),
         ),
         SizedBox(height: _kSpace),
-        RichText(
-          text: TextSpan(
+        Text.rich(
+          TextSpan(
             text:
                 "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
                 "Freelancer and co-founder of ",
-            style: TextStyle(color: Colors.grey, fontFamily: 'circular'),
             children: [
               TextSpan(
                   text: 'Docode OÜ',
@@ -84,6 +82,7 @@ class _Headline extends StatelessWidget {
                   recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://globl.agency', '_blank')),
             ],
           ),
+          style: TextStyle(color: Colors.grey, fontFamily: 'circular', fontSize: 16),
         ),
         SizedBox(height: _kSpace * 2),
         RaisedButton(
@@ -152,13 +151,12 @@ class _Projects extends StatelessWidget {
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(
                       project.title,
-                      style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'circular'),
-                      textScaleFactor: 1.1,
+                      style: TextStyle(fontFamily: 'circular', fontSize: 18),
                     ),
                     SizedBox(height: _kSpace / 3),
                     Text(
                       project.description,
-                      style: TextStyle(color: Colors.grey, fontFamily: 'circular'),
+                      style: TextStyle(color: Colors.grey, fontFamily: 'circular', fontSize: 14),
                     ),
                   ])),
             ),
