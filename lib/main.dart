@@ -38,11 +38,11 @@ class _HomePageLarge extends StatelessWidget {
 class _HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ListView(
-        padding: EdgeInsets.all(24),
+        padding: EdgeInsets.all(_kSpace * 2),
         children: [
-          SizedBox(height: 48),
+          SizedBox(height: _kSpace * 4),
           _Headline(),
-          SizedBox(height: 48),
+          SizedBox(height: _kSpace * 4),
           _Projects(),
         ],
       );
@@ -121,7 +121,7 @@ class _Projects extends StatelessWidget {
         children: [
           for (final project in _kProjects) ...[
             FlatButton(
-              padding: EdgeInsets.all(24),
+              padding: EdgeInsets.all(_kSpace * 2),
               color: Colors.grey[900],
               // hoverColor: project.color,
               onPressed: () {
@@ -135,7 +135,7 @@ class _Projects extends StatelessWidget {
                       style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'circular'),
                       textScaleFactor: 1.1,
                     ),
-                    SizedBox(height: 4),
+                    SizedBox(height: _kSpace / 3),
                     Text(
                       project.description,
                       style: TextStyle(color: Colors.grey, fontFamily: 'circular'),
