@@ -1,5 +1,6 @@
 import 'dart:html' as html;
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:vmihalachi_flutter/project.dart';
 import 'package:vmihalachi_flutter/responsive_layout.dart';
@@ -7,20 +8,27 @@ import 'package:vmihalachi_flutter/responsive_layout.dart';
 const _kSpace = 12.0;
 const _kPrimaryColor = Color(0xFF0269FF);
 
-void main() => runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData.dark().copyWith(
-      // fontFamily: 'circular',
-      buttonTheme: ButtonThemeData(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4))),
-    ),
-    home: Scaffold(
-      backgroundColor: Colors.black,
-      body: ResponsiveLayout(
-        largeScreen: _HomePageLarge(),
-        // mediumScreen: _HomePage(),
-        smallScreen: _HomePage(),
-      ),
-    )));
+void main() => runApp(_App());
+
+class _App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark().copyWith(
+          // fontFamily: 'circular',
+          buttonTheme: ButtonThemeData(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4))),
+        ),
+        home: Scaffold(
+          backgroundColor: Colors.black,
+          body: ResponsiveLayout(
+            largeScreen: _HomePageLarge(),
+            // mediumScreen: _HomePage(),
+            smallScreen: _HomePage(),
+          ),
+        ));
+  }
+}
 
 class _HomePageLarge extends StatelessWidget {
   @override
@@ -58,12 +66,24 @@ class _Headline extends StatelessWidget {
           textScaleFactor: 2,
         ),
         SizedBox(height: _kSpace),
-        Text(
-          "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
-          "Freelancer and co-founder of Globl Agency and Docode OÜ.",
-          style: TextStyle(color: Colors.grey, fontFamily: 'circular'),
-          textScaleFactor: 1.3,
-          // textAlign: TextAlign.justify,
+        RichText(
+          text: TextSpan(
+            text:
+                "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
+                "Freelancer and co-founder of ",
+            style: TextStyle(color: Colors.grey, fontFamily: 'circular'),
+            children: [
+              TextSpan(
+                  text: 'Docode OÜ',
+                  style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
+                  recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://docode.it', '_blank')),
+              TextSpan(text: ' and '),
+              TextSpan(
+                  text: 'Globl Agency',
+                  style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
+                  recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://globl.agency', '_blank')),
+            ],
+          ),
         ),
         SizedBox(height: _kSpace * 2),
         RaisedButton(
