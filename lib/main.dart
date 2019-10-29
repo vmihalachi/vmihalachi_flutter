@@ -62,7 +62,7 @@ class _Headline extends StatelessWidget {
       Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(
           "Vlad Mihalachi",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, fontFamily: 'circular'),
         ),
         SizedBox(height: _kSpace),
         Text.rich(
@@ -73,16 +73,16 @@ class _Headline extends StatelessWidget {
             children: [
               TextSpan(
                   text: 'Docode OÜ',
-                  style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline),
+                  style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
                   /*recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://docode.it', '_blank')*/),
               TextSpan(text: ' and '),
               TextSpan(
                   text: 'Globl Agency',
-                  style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline),
+                  style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
                   /*recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://globl.agency', '_blank')*/),
             ],
           ),
-          style: TextStyle(color: Colors.grey, fontSize: 16),
+          style: TextStyle(color: Colors.grey, fontSize: 16, fontFamily: 'circular'),
         ),
         SizedBox(height: _kSpace * 2),
         RaisedButton(
@@ -151,12 +151,12 @@ class _Projects extends StatelessWidget {
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(
                       project.title,
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 18, fontFamily: 'circular'),
                     ),
                     SizedBox(height: _kSpace / 3),
                     Text(
                       project.description,
-                      style: TextStyle(color: Colors.grey, fontSize: 14),
+                      style: TextStyle(color: Colors.grey, fontSize: 14, fontFamily: 'circular'),
                     ),
                   ])),
             ),

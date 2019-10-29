@@ -15,7 +15,7 @@ flutter:
   fonts:
     - family: circular
       fonts:
-        - asset: web/assets/fonts/circular-medium.ttf
+        - asset: fonts/circular-medium.ttf
 #        - asset: web/assets/fonts/circular-mediumitalic.ttf
 #        - asset: web/assets/fonts/circular-black.ttf
 #        - asset: web/assets/fonts/circular-blackitalic.ttf
