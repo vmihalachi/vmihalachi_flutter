@@ -17,6 +17,8 @@ class _App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
           // fontFamily: 'circular',
+          accentColor: _kPrimaryColor,
+          primaryColor: _kPrimaryColor,
           buttonTheme: ButtonThemeData(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4))),
         ),
         home: Scaffold(
@@ -88,7 +90,7 @@ class _Headline extends StatelessWidget {
         RaisedButton(
           padding: EdgeInsets.symmetric(horizontal: 48, vertical: 12),
           color: _kPrimaryColor,
-          child: Text('Hire Vlad'.toUpperCase()),
+          child: Text('Hire Vlad'.toUpperCase(), style: TextStyle(fontFamily: 'circular'),),
           onPressed: () {
             html.window.open('mailto:vmihalachi@outook.com', '_blank');
           },
