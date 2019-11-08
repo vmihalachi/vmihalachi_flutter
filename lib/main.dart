@@ -76,12 +76,12 @@ class _Headline extends StatelessWidget {
               TextSpan(
                   text: 'Docode OÜ',
                   style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
-                  /*recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://docode.it', '_blank')*/),
+                  recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://docode.it', '_blank')),
               TextSpan(text: ' and '),
               TextSpan(
                   text: 'Globl Agency',
                   style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
-                  /*recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://globl.agency', '_blank')*/),
+                  recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://globl.agency', '_blank')),
             ],
           ),
           style: TextStyle(color: Colors.grey, fontSize: 16, fontFamily: 'circular'),
@@ -115,10 +115,10 @@ class _Projects extends StatelessWidget {
         url: 'https://docode.it/nyam',
         color: _kDocodeColor),
     Project(
-        title: 'Task Runner - Globl Agency',
+        title: 'Task Runner - Docode OÜ',
         description: "You API's best friend. Run your periodic and scheduled tasks with ease.",
         url: 'https://taskrunner.run',
-        color: _kGloblAgencyColor),
+        color: _kDocodeColor),
     Project(
         title: 'Turbo Client',
         description: "Sleek, intuitive and powerful Android FTP & SFTP client.",

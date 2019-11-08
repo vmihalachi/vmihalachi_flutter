@@ -180,6 +180,8 @@ file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/bottom_tab_b
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/button.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/colors.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/constants.dart
+file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/context_menu.dart
+file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/context_menu_action.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/date_picker.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/dialog.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/icon_theme_data.dart
@@ -194,6 +196,7 @@ file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/route.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/scrollbar.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/segmented_control.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/slider.dart
+file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/sliding_segmented_control.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/switch.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/tab_scaffold.dart
 file:///Users/vmihalachi/flutter/packages/flutter/lib/src/cupertino/tab_view.dart
