@@ -71,17 +71,17 @@ class _Headline extends StatelessWidget {
           TextSpan(
             text:
                 "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
-                "Freelancer and co-founder of ",
+                "Software Developer at Microsoft and co-founder of ",
             children: [
               TextSpan(
                   text: 'Docode OÜ',
                   style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
                   recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://docode.it', '_blank')),
-              TextSpan(text: ' and '),
+              /*TextSpan(text: ' and '),
               TextSpan(
                   text: 'Globl Agency',
                   style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
-                  recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://globl.agency', '_blank')),
+                  recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://globl.agency', '_blank')),*/
             ],
           ),
           style: TextStyle(color: Colors.grey, fontSize: 16, fontFamily: 'circular'),
@@ -90,10 +90,10 @@ class _Headline extends StatelessWidget {
         RaisedButton(
           padding: EdgeInsets.symmetric(horizontal: 48, vertical: 12),
           color: _kPrimaryColor,
-          child: Text('Hire Vlad'.toUpperCase(), style: TextStyle(fontFamily: 'circular'),),
-          onPressed: () {
+          child: Text('Hire Vlad (already hired)'.toUpperCase(), style: TextStyle(fontFamily: 'circular'),),
+          onPressed: null /*() {
             html.window.open('mailto:vmihalachi@outook.com', '_blank');
-          },
+          }*/,
         )
       ]);
 }
