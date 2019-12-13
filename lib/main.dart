@@ -71,7 +71,7 @@ class _Headline extends StatelessWidget {
           TextSpan(
             text:
                 "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
-                "Software Developer at Microsoft and co-founder of ",
+                "Software Engineer at Microsoft and co-founder of ",
             children: [
               TextSpan(
                   text: 'Docode OÜ',

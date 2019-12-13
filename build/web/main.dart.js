@@ -35131,7 +35131,7 @@ F.qJ.prototype={
 M:function(a){var u="circular",t=null,s=L.FQ("Vlad Mihalachi",A.d2(t,t,t,t,t,t,t,t,u,t,t,30,t,C.bw,t,t,!0,t,t,t,t,t,t)),r=A.d2(t,t,C.b6,t,C.hY,t,t,t,u,t,t,t,t,t,t,t,!0,t,t,t,t,t,t),q=P.j
 q=new N.ev(C.bX,18,C.b7,P.w(q,D.bN),P.aI(q),t,t,P.w(q,P.bi))
 q.ax=new F.IK()
-return T.Oq(H.b([s,new T.bR(t,12,t,t),new L.pq(t,Q.pw(H.b([Q.pw(t,q,r,"Docode O\xdc")],[G.hj]),t,t,"Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. Software Developer at Microsoft and co-founder of "),A.d2(t,t,C.jK,t,t,t,t,t,u,t,t,16,t,t,t,t,!0,t,t,t,t,t,t),t),new T.bR(t,24,t,t),new D.ov(t,t,t,t,t,t,C.b6,t,t,t,t,t,t,t,t,t,t,t,L.FQ("Hire Vlad (already hired)".toUpperCase(),A.d2(t,t,t,t,t,t,t,t,u,t,t,t,t,t,t,t,!0,t,t,t,t,t,t)),new V.ao(48,12,48,12),t,C.aj,t,!1,t,t,t)],[N.aW]),C.bT,C.hF)}}
+return T.Oq(H.b([s,new T.bR(t,12,t,t),new L.pq(t,Q.pw(H.b([Q.pw(t,q,r,"Docode O\xdc")],[G.hj]),t,t,"Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. Software Engineer at Microsoft and co-founder of "),A.d2(t,t,C.jK,t,t,t,t,t,u,t,t,16,t,t,t,t,!0,t,t,t,t,t,t),t),new T.bR(t,24,t,t),new D.ov(t,t,t,t,t,t,C.b6,t,t,t,t,t,t,t,t,t,t,t,L.FQ("Hire Vlad (already hired)".toUpperCase(),A.d2(t,t,t,t,t,t,t,t,u,t,t,t,t,t,t,t,!0,t,t,t,t,t,t)),new V.ao(48,12,48,12),t,C.aj,t,!1,t,t,t)],[N.aW]),C.bT,C.hF)}}
 F.IK.prototype={
 $0:function(){return C.ax.wn(window,"https://docode.it","_blank")},
 $S:146}
