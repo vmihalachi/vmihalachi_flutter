@@ -34,7 +34,8 @@ class _App extends StatelessWidget {
 
 class _HomePageLarge extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => Row(
+  Widget build(BuildContext context) =>
+      Row(
         children: [
           Spacer(),
           ConstrainedBox(constraints: BoxConstraints(maxWidth: 500), child: _Headline()),
@@ -47,7 +48,8 @@ class _HomePageLarge extends StatelessWidget {
 
 class _HomePage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => ListView(
+  Widget build(BuildContext context) =>
+      ListView(
         padding: EdgeInsets.all(_kSpace * 2),
         children: [
           SizedBox(height: _kSpace * 4),
@@ -59,6 +61,9 @@ class _HomePage extends StatelessWidget {
 }
 
 class _Headline extends StatelessWidget {
+
+  static const textStyleLink = TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular');
+
   @override
   Widget build(BuildContext context) =>
       Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -70,13 +75,14 @@ class _Headline extends StatelessWidget {
         Text.rich(
           TextSpan(
             text:
-                "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
+            "Full-Stack developer, App developer, Server Guy. Special care for design architectures & code reusability. "
                 "Software Engineer at Microsoft and co-founder of ",
             children: [
               TextSpan(
                   text: 'Docode OÜ',
-                  style: TextStyle(color: _kPrimaryColor, decoration: TextDecoration.underline, fontFamily: 'circular'),
-                  recognizer: TapGestureRecognizer()..onTap = () => html.window.open('https://docode.it', '_blank')),
+                  style: textStyleLink,
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () => html.window.open('https://docode.it', '_blank')),
               /*TextSpan(text: ' and '),
               TextSpan(
                   text: 'Globl Agency',
@@ -86,11 +92,15 @@ class _Headline extends StatelessWidget {
           ),
           style: TextStyle(color: Colors.grey, fontSize: 16, fontFamily: 'circular'),
         ),
-        SizedBox(height: _kSpace * 2),
+        SizedBox(height: _kSpace),
+        GestureDetector(
+            child: Text('@GitHub', style: textStyleLink),
+            onTap: () => html.window.open('https://github.com/vmihalachi', '_blank')),
+        SizedBox(height: _kSpace),
         RaisedButton(
           padding: EdgeInsets.symmetric(horizontal: 48, vertical: 12),
           color: _kPrimaryColor,
-          child: Text('Hire Vlad (already hired)'.toUpperCase(), style: TextStyle(fontFamily: 'circular'),),
+          child: Text('Hire Vlad (already hired :P)'.toUpperCase(), style: TextStyle(fontFamily: 'circular'),),
           onPressed: null /*() {
             html.window.open('mailto:vmihalachi@outook.com', '_blank');
           }*/,
@@ -116,18 +126,19 @@ class _Projects extends StatelessWidget {
         color: _kDocodeColor),
     Project(
         title: 'Task Runner - Docode OÜ',
-        description: "You API's best friend. Run your periodic and scheduled tasks with ease.",
+        description: "Your API's best friend. Run your periodic and scheduled tasks with ease.",
         url: 'https://taskrunner.run',
         color: _kDocodeColor),
     Project(
-        title: 'Turbo Client',
-        description: "Sleek, intuitive and powerful Android FTP & SFTP client.",
-        url: 'https://play.google.com/store/apps/details?id=turbo.client',
-        color: _kPrimaryColor),
+      title: 'TheCharts - Globl Agency',
+      description: 'Industry quality, radio ready beats and instrumentals that will take any artist to the next level. Together we’ll give them music to talk about.',
+      url: 'https://thecharts.com',
+      color: _kGloblAgencyColor,
+    ),
     Project(
-        title: 'Turbo Editor',
-        description: "Simple, powerful and Open Source text editor for Android.",
-        url: 'https://play.google.com/store/apps/details?id=com.maskyn.fileeditor',
+        title: 'Turbo Client & Turbo Editor',
+        description: "Sleek, intuitive and powerful Android FTP & SFTP client. Comes with Rich and Open Source text editor.",
+        url: 'https://play.google.com/store/apps/details?id=turbo.client',
         color: _kPrimaryColor),
     Project(
         title: 'Just Quote It',
@@ -137,7 +148,8 @@ class _Projects extends StatelessWidget {
   ];
 
   @override
-  Widget build(BuildContext context) => Column(
+  Widget build(BuildContext context) =>
+      Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           for (final project in _kProjects) ...[

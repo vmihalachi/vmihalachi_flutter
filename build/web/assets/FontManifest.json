@@ -1,1 +1,10 @@
-[{"family":"circular","fonts":[{"asset":"fonts/circular-medium.ttf"}]}]
+[
+  {
+    "family": "circular",
+    "fonts": [
+      {
+        "asset": "fonts/circular-medium.ttf"
+      }
+    ]
+  }
+]
