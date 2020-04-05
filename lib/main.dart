@@ -114,10 +114,10 @@ class _Projects extends StatelessWidget {
 
   static final _kProjects = [
     Project(
-      title: 'Beatpulse - Globl Agency',
+      title: 'Beatpulse - Docode OÜ',
       description: 'Producer-owned beat streaming and licensing platform.',
       url: 'https://beatpulse.co',
-      color: _kGloblAgencyColor,
+      color: _kDocodeColor,
     ),
     Project(
         title: 'Nyam - Docode OÜ',
@@ -130,10 +130,10 @@ class _Projects extends StatelessWidget {
         url: 'https://taskrunner.run',
         color: _kDocodeColor),
     Project(
-      title: 'TheCharts - Globl Agency',
+      title: 'TheCharts - Docode OÜ',
       description: 'Industry quality, radio ready beats and instrumentals that will take any artist to the next level. Together we’ll give them music to talk about.',
       url: 'https://thecharts.com',
-      color: _kGloblAgencyColor,
+      color: _kDocodeColor,
     ),
     Project(
         title: 'Turbo Client & Turbo Editor',
@@ -153,10 +153,11 @@ class _Projects extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           for (final project in _kProjects) ...[
-            FlatButton(
+            OutlineButton(
               padding: EdgeInsets.all(_kSpace * 2),
               color: Colors.grey[900],
-              // hoverColor: project.color,
+              borderSide: BorderSide(color: project.color, width: 4),
+              splashColor: project.color,
               onPressed: () {
                 html.window.open(project.url, '_blank');
               },
